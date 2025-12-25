@@ -42,7 +42,7 @@ targets:
     mode: development
 
     workspace:
-      host: https://dbc-1208c84c-e3b6.cloud.databricks.com/
+      host: https://adb-7405616915140922.2.azuredatabricks.net/
       root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.target}/${bundle.name}
       # profile: dbc-1208c84c-e3b6
 
@@ -56,9 +56,9 @@ targets:
       name_prefix: "acc_"
 
     workspace:
-      host: https://dbc-1208c84c-e3b6.cloud.databricks.com/
+      host: https://adb-7405616915140922.2.azuredatabricks.net/
       root_path: /Shared/.bundle/${bundle.target}/${bundle.name}
-      profile: dbc-1208c84c-e3b6
+      profile: adb-7405616915140922
 
     variables:
       schedule_pause_status: UNPAUSED
@@ -68,9 +68,9 @@ targets:
     mode: production
 
     workspace:
-      host: https://dbc-1208c84c-e3b6.cloud.databricks.com/
+      host: https://adb-7405616915140922.2.azuredatabricks.net/
       root_path: /Shared/.bundle/${bundle.target}/${bundle.name}
-      profile: dbc-1208c84c-e3b6
+      profile: adb-7405616915140922
 
     variables:
       schedule_pause_status: UNPAUSED
