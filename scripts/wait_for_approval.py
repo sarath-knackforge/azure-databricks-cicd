@@ -68,6 +68,16 @@ while True:
     print("⏳ Waiting for approval flag to become TRUE/FALSE...")
     time.sleep(30)
 
+# Update status to APPROVED
+spark.sql(f"""
+UPDATE mlops_dev.model_test.model_approvals
+SET status = 'APPROVED', 
+    approval_date = current_timestamp()
+WHERE registered_run_id = '{run_id}' 
+  AND model_name = '{model_name}' 
+  AND model_version = '{model_version}'
+""")
+
 print("🏁 Approval check finished.")
 
 
